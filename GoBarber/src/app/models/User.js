@@ -4,7 +4,7 @@ class User extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
+        nome: Sequelize.STRING,
         email: Sequelize.STRING,
         password_hash: Sequelize.STRING,
         provider: Sequelize.BOOLEAN,
