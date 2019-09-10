@@ -51,7 +51,7 @@ class UserController {
 
     const user = await User.findByPk(req.userId);
     // eslint-disable-next-line eqeqeq
-    if (email != user.email) {
+    if (email !== user.email) {
       const userExists = await User.findOne({ where: { email } });
       if (userExists) {
         return res.status(400).json({ erro: 'User already exits.' });
