@@ -109,6 +109,11 @@ class AppointmentController {
           as: 'provider',
           attributes: ['nome', 'email'],
         },
+        {
+          model: User,
+          as: 'user',
+          attributes: ['nome'],
+        },
       ],
     });
 
@@ -132,7 +137,14 @@ class AppointmentController {
     await Mail.sendMail({
       to: `${appointment.provider.nome} <${appointment.provider.email}>`,
       subject: 'Agendamento cancelado',
-      text: 'Você tem um novo cancelamento',
+      template: 'cancellation',
+      context: {
+        provider: appointment.provider.nome,
+        user: appointment.user.nome,
+        date: format(appointment.date, "'dia' dd 'de' MMMM', às' H:mm'h'", {
+          locale: pt,
+        }),
+      },
     });
     return res.json(appointment);
   }
