@@ -2,7 +2,7 @@
 # (Fase 2)
 Bootcamp Rocketseat - Node.js
 
-#Sequência de comandos utilizados:
+# Sequência de comandos utilizados:
 
 TERMINAL:
 Instalação do Chocolatey (Windows - CMD)=> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
@@ -54,7 +54,6 @@ yarn add bee-queue
 yarn add @sentry/node@5.6.2
 yarn add express-async-errors
 
-//-----------------------------------------------------
 CONFIGURAÇÕES VS CODE settigns.json:
 (ctrl+shift+p) // atalho para abrir e pesquise settings.json
 
