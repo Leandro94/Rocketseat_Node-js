@@ -1,4 +1,4 @@
-# Rocketseat_Node-js Backend
+# Rocketseat_Node-js (Backend)
 # (Fase 2)
 Bootcamp Rocketseat - Node.js
 
